@@ -1,6 +1,5 @@
-@extends('welcome')
-@section('page-title')  Login @stop
-@section('content')
+<?php $__env->startSection('page-title'); ?>  Login <?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
   <div class="login-form">
     <form action="/examples/actions/confirmation.php" method="post">
       <h2 class="text-center">Sign in</h2>
@@ -30,6 +29,8 @@
       </div>
 
     </form>
-    <div class="hint-text small">Don't have an account? <a href="{{ route('register') }}" class="text-success">Register Now!</a></div>
+    <div class="hint-text small">Don't have an account? <a href="<?php echo e(route('register')); ?>" class="text-success">Register Now!</a></div>
   </div>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('welcome', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\laravel-vue\app\Modules/Auth/Views/login.blade.php ENDPATH**/ ?>
